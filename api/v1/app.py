@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Flask Application """
+
+""" Flask Applications """
 from models import storage
 from api.v1.views import app_views
 from os import environ
@@ -16,7 +17,7 @@ cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 @app.teardown_appcontext
 def close_db(error):
-    """ Close Storage """
+    """ Close Storages """
     storage.close()
 
 

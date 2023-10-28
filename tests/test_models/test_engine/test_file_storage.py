@@ -24,7 +24,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class TestFileStorageDocs(unittest.TestCase):
-    """Tests to check the documentation and style of FileStorage class"""
+    """Tests to check the documentation and style of FileStorage classes"""
     @classmethod
     def setUpClass(cls):
         """Set up for the doc tests"""
@@ -60,7 +60,7 @@ test_file_storage.py'])
                         "FileStorage class needs a docstring")
 
     def test_fs_func_docstrings(self):
-        """Test for the presence of docstrings in FileStorage methods"""
+        """Test for the presence of docstrings in FileStorage method"""
         for func in self.fs_f:
             self.assertIsNot(func[1].__doc__, None,
                              "{:s} method needs a docstring".format(func[0]))

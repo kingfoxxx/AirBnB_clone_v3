@@ -160,4 +160,5 @@ Tanguy Sauraneri - [Github](https://github.com/TS-N) / [Twitter]()
 
 Second part of Airbnb: Joann Vuong
 ## License
-Public Domain. No copy write protection. 
+Public Domain. No copy write protection
+Since the beginning we’ve been using the unittest module, but do you know why unittests are so important? Because when you add a new feature, you refactor a piece of code, etc… you want to be sure you didn’t break anything

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the FileStorage class
+Contains the FileStorage classes
 """
 
 import json
@@ -19,7 +19,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class FileStorage:
-    """serializes instances to a JSON file & deserializes back to instances"""
+    """serializes instances to a JSON file & deserializes back to instance"""
 
     # string - path to the JSON file
     __file_path = "file.json"
@@ -27,7 +27,7 @@ class FileStorage:
     __objects = {}
 
     def all(self, cls=None):
-        """returns the dictionary __objects"""
+        """returns the dictionary __object"""
         if cls is not None:
             new_dict = {}
             for key, value in self.__objects.items():
@@ -53,7 +53,7 @@ class FileStorage:
             json.dump(json_objects, f)
 
     def reload(self):
-        """deserializes the JSON file to __objects"""
+        """deserializes the JSON file to __object"""
         try:
             with open(self.__file_path, 'r') as f:
                 jo = json.load(f)
