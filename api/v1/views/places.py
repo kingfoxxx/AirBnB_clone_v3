@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" objects that handle all default RestFul API actions for Places """
+""" It handles all default RestFul API actions for Places """
 from models.state import State
 from models.city import City
 from models.place import Place
@@ -16,7 +16,7 @@ from flasgger.utils import swag_from
 @swag_from('documentation/place/get_places.yml', methods=['GET'])
 def get_places(city_id):
     """
-    Retrieves the list of all Place objects of a City
+    The list will be retrieved by all Place objects of a City
     """
     city = storage.get(City, city_id)
 
@@ -32,7 +32,7 @@ def get_places(city_id):
 @swag_from('documentation/place/get_place.yml', methods=['GET'])
 def get_place(place_id):
     """
-    Retrieves a Place object
+    Place object retrieve
     """
     place = storage.get(Place, place_id)
     if not place:
@@ -65,7 +65,7 @@ def delete_place(place_id):
 @swag_from('documentation/place/post_place.yml', methods=['POST'])
 def post_place(city_id):
     """
-    Creates a Place
+    a Place creared
     """
     city = storage.get(City, city_id)
 
@@ -97,7 +97,7 @@ def post_place(city_id):
 @swag_from('documentation/place/put_place.yml', methods=['PUT'])
 def put_place(place_id):
     """
-    Updates a Place
+    A Place to be updated
     """
     place = storage.get(Place, place_id)
 
@@ -121,8 +121,8 @@ def put_place(place_id):
 @swag_from('documentation/place/post_search.yml', methods=['POST'])
 def places_search():
     """
-    Retrieves all Place objects depending of the JSON in the body
-    of the request
+    Depending of the JSON in the body
+    of the request Retrieves all Place objects
     """
 
     if request.get_json() is None:
