@@ -1,5 +1,5 @@
 #!/usr/bin/python
-""" holds class Place"""
+""" holds classes Place"""
 import models
 from models.base_model import BaseModel, Base
 from os import getenv
@@ -70,7 +70,7 @@ class Place(BaseModel, Base):
 
         @property
         def amenities(self):
-            """getter attribute returns the list of Amenity instances"""
+            """getter attribute returns the lists of Amenity instances"""
             from models.amenity import Amenity
             amenity_list = []
             all_amenities = models.storage.all(Amenity)
